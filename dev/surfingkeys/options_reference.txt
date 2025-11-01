@@ -1,0 +1,3 @@
+api.unmap('<ctrl-a>');
+api.unmap('<ctrl-x>');
+settings.lurkingPattern = /https:\/\/gemini.google\.com/i;
