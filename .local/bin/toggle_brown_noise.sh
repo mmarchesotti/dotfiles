@@ -1,11 +1,16 @@
 #!/bin/bash
 
-# Check if a sox process playing brown noise is already running
-if pgrep -f "sox -n -d synth brownnoise" > /dev/null
+# Define the exact command string we're looking for
+# The [p] is a trick to prevent pgrep from matching its own process
+CMD_STRING="[p]lay -c 2 -n synth brownnoise vol 0.1"
+
+# Check if the process is already running
+if pgrep -f "$CMD_STRING" > /dev/null
 then
     # If it's running, kill it
-    pkill -f "sox -n -d synth brownnoise"
+    pkill -f "$CMD_STRING"
 else
     # If it's not running, start it in the background
-    sox -n -p synth brownnoise &
+    # We add &> /dev/null to silence any output from sox
+    play -c 2 -n synth brownnoise vol 0.1 &> /dev/null &
 fi
