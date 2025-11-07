@@ -10,3 +10,4 @@ source ~/.local/share/omarchy/default/bash/rc
 # Make an alias for invoking commands you use constantly
 # alias p='python'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/dev/.dotfiles/ --work-tree=$HOME'
+alias lazydot='lazygit --git-dir=$HOME/dev/.dotfiles --work-tree=$HOME'
