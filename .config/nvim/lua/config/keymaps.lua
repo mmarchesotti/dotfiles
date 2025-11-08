@@ -34,9 +34,6 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 -- new tmux session
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
--- format current buffer
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
-
 -- quick fix navigation
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
