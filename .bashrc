@@ -11,3 +11,6 @@ source ~/.local/share/omarchy/default/bash/rc
 # alias p='python'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/dev/.dotfiles/ --work-tree=$HOME'
 alias lazydot='lazygit --git-dir=$HOME/dev/.dotfiles --work-tree=$HOME'
+
+export EDITOR="nvim"
+export VISUAL="nvim"
