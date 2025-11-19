@@ -3,7 +3,7 @@
 -- Add any additional keymaps here
 
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>mpv", vim.cmd.Ex)
 
 -- when on visual mode, J and K moves the selection (like alt + arrow)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -21,30 +21,28 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- replace without overwriting buffer
-vim.keymap.set("x", "<leader>p", [["_dP]])
+-- DELETE sends to black hole register ("_d) instead of clipboard
+vim.keymap.set({ "n", "v" }, "d", '"_d')
+vim.keymap.set({ "n", "v" }, "D", '"_D')
 
--- delete without overwriting buffer
-vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+-- CHANGE sends to black hole register ("_c)
+vim.keymap.set({ "n", "v" }, "c", '"_c')
+vim.keymap.set({ "n", "v" }, "C", '"_C')
 
--- copy to system clipboard (+y buffer)
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
-
--- new tmux session
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+-- X sends to black hole register ("_x)
+vim.keymap.set({ "n", "v" }, "x", '"_x')
 
 -- quick fix navigation
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
-vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+vim.keymap.set("n", "<leader>mk", "<cmd>lnext<CR>zz")
+vim.keymap.set("n", "<leader>mj", "<cmd>lprev<CR>zz")
 
 -- use current word on replace menu
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>ms", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- make executable of current file
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+vim.keymap.set("n", "<leader>mx", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- tmux navigation
 vim.keymap.set("n", "<C-h>", "<cmd> TmuxNavigateLeft<CR>", { desc = "window left" })
