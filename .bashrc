@@ -14,3 +14,6 @@ alias lazydot='lazygit --git-dir=$HOME/dev/.dotfiles --work-tree=$HOME'
 
 export EDITOR="nvim"
 export VISUAL="nvim"
+
+# Initialize Atuin
+eval "$(atuin init bash)"
