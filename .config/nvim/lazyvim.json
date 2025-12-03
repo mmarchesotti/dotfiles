@@ -1,7 +1,9 @@
 {
   "extras": [
+    "lazyvim.plugins.extras.dap.core",
     "lazyvim.plugins.extras.editor.neo-tree",
     "lazyvim.plugins.extras.lang.go",
+    "lazyvim.plugins.extras.test.core",
     "lazyvim.plugins.extras.util.dot"
   ],
   "install_version": 8,
