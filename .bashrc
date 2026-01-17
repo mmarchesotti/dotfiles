@@ -17,3 +17,5 @@ export VISUAL="nvim"
 
 # Initialize Atuin
 eval "$(atuin init bash)"
+
+. "$HOME/.local/share/../bin/env"

@@ -170,3 +170,5 @@ fi
 if (( $+commands[atuin] )); then
     eval "$(atuin init zsh)"
 fi
+
+. "$HOME/.local/share/../bin/env"
