@@ -14,7 +14,7 @@ vim.opt.smartindent = true
 -- vim.opt.wrap = true
 vim.opt.wrap = false
 
-vim.opt.swapfile = false
+vim.opt.swapfile = true
 vim.opt.backup = false
 local undo_dir = vim.fn.stdpath("state") .. "/undo"
 vim.fn.mkdir(undo_dir, "p")
